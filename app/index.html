@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hearth — Household Budget</title>
+<meta name="description" content="Hearth is a household budget tracker: income and spending, category budgets, savings goals, recurring bills and monthly reports for one family, all in the browser.">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#/">
+      <span class="brand-mark" aria-hidden="true">&#8962;</span>
+      <span class="brand-name">Hearth</span>
+      <span class="brand-sub">Household Budget</span>
+    </a>
+    <nav class="mainnav" aria-label="Sections">
+      <a href="#/" data-nav="dashboard">Dashboard</a>
+      <a href="#/transactions" data-nav="transactions">Transactions</a>
+      <a href="#/budgets" data-nav="budgets">Budgets</a>
+      <a href="#/goals" data-nav="goals">Goals</a>
+      <a href="#/bills" data-nav="bills">Bills</a>
+      <a href="#/reports" data-nav="reports">Reports</a>
+    </nav>
+    <div class="month-switch" aria-label="Month">
+      <button id="month-prev" type="button" aria-label="Previous month">&#8249;</button>
+      <span id="month-label">November 2026</span>
+      <button id="month-next" type="button" aria-label="Next month">&#8250;</button>
+    </div>
+  </div>
+</header>
+<main class="wrap" id="view" aria-live="polite"></main>
+<footer class="wrap foot">
+  <p><strong>Hearth</strong> keeps one household&rsquo;s money in one place. Demo data for the Hartley household
+  lives in your browser only &mdash; add, edit or delete anything and it stays saved on this device.
+  <button id="reset-demo" type="button" class="linklike">Reset demo data</button></p>
+  <p class="foot-note">All figures are in US dollars. No account, no uploads, no tracking.</p>
+</footer>
+<div id="modal-root"></div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>
